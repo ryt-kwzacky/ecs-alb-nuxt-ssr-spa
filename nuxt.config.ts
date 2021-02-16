@@ -1,4 +1,10 @@
-export default {
+import { NuxtConfig } from '@nuxt/types'
+
+const { NODE_ENV } = process.env
+const isDev = NODE_ENV === 'development'
+
+const config: NuxtConfig = {
+  dev: isDev,
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'ecs-alb-terraform-nuxt-ssr-spa',
@@ -46,3 +52,5 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
 }
+
+export default config

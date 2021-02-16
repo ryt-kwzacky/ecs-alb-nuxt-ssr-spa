@@ -1,37 +1,32 @@
 {
   "compilerOptions": {
-    "target": "ES2018",
-    "module": "ESNext",
-    "moduleResolution": "Node",
-    "lib": [
-      "ESNext",
-      "ESNext.AsyncIterable",
-      "DOM"
-    ],
-    "esModuleInterop": true,
-    "allowJs": true,
-    "sourceMap": true,
-    "strict": true,
-    "noEmit": true,
-    "experimentalDecorators": true,
     "baseUrl": ".",
-    "paths": {
-      "~/*": [
-        "./*"
-      ],
-      "@/*": [
-        "./*"
-      ]
-    },
+    "rootDir": ".",
     "types": [
-      "@nuxt/types",
-      "@nuxtjs/axios",
-      "@types/node"
-    ]
+      "@types/node",
+      "@nuxt/types"
+    ],
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "lib": [
+      "esnext",
+      "esnext.asynciterable",
+      "dom"
+    ],
+    "paths": { "~/*": [ "./src/*" ] },
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "strict": true,
+    "removeComments": true, // 「/*!」で始まるコメント以外を除去する
+    "noUnusedLocals": true, // 使っていないローカル変数をエラーにする
+    "noUnusedParameters": true, // 使っていない仮引数をエラーにする
+    "noImplicitReturns": true, // 暗黙的に undefined を返している関数をエラーにする
+    "allowUnreachableCode": false, // 到達しえないコードを許容しない
+    "allowSyntheticDefaultImports": true, // default export なしでの default import を許容する
+    "forceConsistentCasingInFileNames": true, // 大文字小文字を区別して参照を解決するようする
   },
   "exclude": [
     "node_modules",
-    ".nuxt",
-    "dist"
   ]
 }
