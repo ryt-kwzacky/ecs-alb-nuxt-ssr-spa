@@ -24,7 +24,7 @@ const loggerMiddleware = (
   next()
 }
 
-async function start() {
+const start = async () => {
   const nuxt = new Nuxt(config)
 
   if (config.dev) {
